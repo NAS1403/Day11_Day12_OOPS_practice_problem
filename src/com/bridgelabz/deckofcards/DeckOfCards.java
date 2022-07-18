@@ -14,17 +14,14 @@ public class DeckOfCards {
         }
         Shuffle shuffle = new Shuffle();
         shuffle.shuffleCards(cardsArray);
-                int i=0;
-                for (int a=1;a<=4;a++){
-                    int j=0;
+                for (int i=0;i<4;i++){
                     System.out.println();
-                    System.out.println("Cards for player "+a);
+                    System.out.println("Cards for player "+(i+1));
                     System.out.println();
-                    for (int b=0;b<9;b++){
+                    for (int j=0;j<9;j++){
                         System.out.println(cardsArray[i][j]);
-                        j++;
                     }
-                    i++;
+
                 }
     }
 }
