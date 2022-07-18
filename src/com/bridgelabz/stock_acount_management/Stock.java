@@ -29,12 +29,6 @@ public class Stock {
         this.sharePrice = sharePrice;
     }
 
-    public Stock(String stockName, int noOfShares, double sharePrice) {
-        this.stockName = stockName;
-        this.noOfShares = noOfShares;
-        this.sharePrice = sharePrice;
-
-    }
 
     @Override
     public String toString() {
