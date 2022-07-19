@@ -1,8 +1,12 @@
 package com.bridgelabz.stock_acount_management;
+import com.bridgelabz.deckofcards.DeckOfCards;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StockPortfolio{
+
+    double totalValue;
     int noOfStocks;
     Scanner scr = new Scanner(System.in);
     ArrayList<Stock> list = new ArrayList<>();
@@ -25,19 +29,10 @@ public class StockPortfolio{
             System.out.println("Enter each share price");
             stock.setSharePrice( scr.nextDouble());
             list.add(stock);
-        }
-    }
-
-    void valueOfStock(){
-        double totalValue=0;
-        for(Stock stock : list){
             double stockValue = stock.getNoOfShares()*stock.getSharePrice();
-            System.out.println("Stock value of  "+ stock.getStockName()+ " is "+ stockValue);
             totalValue+=stockValue;
         }
-        System.out.println("Value of total stock is: "+totalValue);
     }
-
    void display(){
        for(Stock stock : list){
             System.out.println(stock);

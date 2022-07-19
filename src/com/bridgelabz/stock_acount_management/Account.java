@@ -1,10 +1,10 @@
-package com.bridgelabz.account;
+package com.bridgelabz.stock_acount_management;
 import java.util.Scanner;
 
 public class Account {
     int debit;
 
-    void debit(int accountBalance){
+    void debit(Double accountBalance){
 
         Scanner scr = new Scanner(System.in);
         System.out.println("Enter the amount to debit from account balance");
@@ -18,7 +18,6 @@ public class Account {
             accountBalance-=debit;
             System.out.println("Remaining account balance is: "+accountBalance);
         }
-
     }
 
     public Account() {
